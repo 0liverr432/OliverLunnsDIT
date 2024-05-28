@@ -1,0 +1,1 @@
+All code used in my game that I have written, either this year or in previous years. Any code that has been taken from other sources will also be in here, but cretided to the person that has actually made them, even if that is ChatGPT.
