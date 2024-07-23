@@ -2,30 +2,20 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
-    public float health = 50f; 
+    public float health = 50f; //variable for health of the target
+    
     public void TakeDamage (float amount)
     {
-        health -= amount; 
+        health -= amount; //takes of health
         if (health <= 0f)
         {
-            Die();
+            Die();    //kills the target
         }
     }
-
-
-
     void Die ()
     {
-        Destroy(gameObject);
+        Destroy(gameObject); //makes the object dissapear
     }
-
-
-
-
-
-
-
-
 }
 
 
