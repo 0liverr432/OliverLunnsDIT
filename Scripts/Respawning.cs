@@ -6,7 +6,7 @@ public class Respawning : MonoBehaviour
 {
     public void Respawn()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(1);    //loads the original scene from the death menu or the play menu
     }
 
 }
