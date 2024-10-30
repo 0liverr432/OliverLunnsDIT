@@ -27,8 +27,8 @@ public class OptionsMenu : MonoBehaviour
 
     private bool isMoving;       
 
-    void Start()                              // Function that runs when game starts
-    {
+    void Start()                              // Another convention of unitys programing is methods which run code when the 
+    {                                         // this paticular function runs when the play button is first pressed then never again.
         startPosition = new Vector3(2.45f, 1.39f, -8.7f);    
         endPosition = new Vector3(52.35f, 1.39f, -8.7f);
         cameraPosition = mainCamera.transform.position;
@@ -40,15 +40,15 @@ public class OptionsMenu : MonoBehaviour
 
         mainCamera.transform.position = startPosition;
 
-        if (optionsButton != null)
-        {
-            optionsButton.onClick.AddListener(OptionMenu);
+        if (optionsButton != null)    // In the code this is a major decision finding whether or not the options button is active 
+        {                             // which then adds a function to run whenever the button is clicked by the mouse |
+            optionsButton.onClick.AddListener(OptionMenu);//here <-----------------------------------------------------|
         }
     }
     void OptionMenu()
     {
-        MainMenu.SetActive(false);
-        optionMenu.SetActive(true);
+        MainMenu.SetActive(false);        //the start varaibles above are then refrenced here in the function called when the 
+        optionMenu.SetActive(true);       // options button is pressed. 
         isMoving = true;
 
     }
