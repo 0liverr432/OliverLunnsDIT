@@ -6,29 +6,30 @@ using UnityEngine.UI;
 public class OptionsMenu : MonoBehaviour
 {
 
-    public Camera mainCamera;                 //refrences the camera
+    public Camera mainCamera;               //These are my start variables that are refrences to in game objects   
+    public Button optionsButton;              
+    // this indentation and the ones below are used so that while coding I can see and anyone else can see for different types 
+    // of variables such as object references above and Vector3 positions below. This is camel casing which is a part of unity programming conventions
+    // Camel casing also includes extended, descriptave names for variables which you can see |
+    public Vector3 startPosition;    //                                                       |
+    public Vector3 endPosition;      //                                                       |   
+    public Vector3 cameraPosition;   //                                                       |        
+    Vector3 currentVelocity;         //                                                       |             
+                                     //                                                       |
+    public float moveSpeed = 10f;    // <------------------------------------------------------ here instead of using ms for     
+    public float smoothTime = 0.5f;  // move speed i have enlongated the variable name to moveSpeed to describe it better.        
     
-    public Button optionsButton;              //refrences the options button that player presses
-    
-    public Vector3 startPosition;             //Position that camera starts at
-    public Vector3 endPosition;               //Position that camera will end at
-    public Vector3 cameraPosition;            //Current position that camera is at
-    Vector3 currentVelocity;                  //Current velocity of the camera
-    
-    public float moveSpeed = 10f;             //Move Speed of the camera
-    public float smoothTime = 0.5f;           //how long it takes for the camera to slow down to stop
-    
-    public GameObject Title;                  //The title of the game on fron screen
-    public GameObject optionMenu;             //The options menu to be set active or not
-    public GameObject MainMenu;               //MainMenu to be set active or not
+    public GameObject Title;                  
+    public GameObject optionMenu;             
+    public GameObject MainMenu;              
    
     public int iterationCount = 75;
 
-    private bool isMoving;                    //Can be set active to show whether camera is moving or not
+    private bool isMoving;       
 
     void Start()                              // Function that runs when game starts
     {
-        startPosition = new Vector3(2.45f, 1.39f, -8.7f);
+        startPosition = new Vector3(2.45f, 1.39f, -8.7f);    
         endPosition = new Vector3(52.35f, 1.39f, -8.7f);
         cameraPosition = mainCamera.transform.position;
 
